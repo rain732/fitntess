@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400&family=Syne:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Syne", sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 8.5rem;
+  line-height: 11.5rem;
+  margin-bottom: 10rem;
+}
+
+.img-container {
+  background-image: url("./assets/images/gym-inside.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.form-container {
+  background-color: #d5d5d5;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.form-container > form {
+  max-width: 45rem;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  padding: 5rem 3rem;
+  z-index: 100;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.form-group label {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.9rem;
+}
+
+.form-control {
+  padding: 1rem;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 2rem 0;
+  font-family: "Epilogue", sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  line-height: 2rem;
+  margin-top: 4rem;
+}
+
+.btn-dark {
+  background-color: #000;
+  border: #000;
+  color: #fff;
+}
+
+.fitness-woman {
+  position: absolute;
+  height: 95vh;
+  transform: translate(-50%, 0);
+  bottom: 0;
+  left: 105%;
+}
+.img-container .brand {
+  background-color: #fb7f60;
+  height: 20rem;
+  width: 20rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 1400px) {
+  .fitness-woman {
+    left: 110%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .fitness-woman {
+    left: 120%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  .img-container {
+    display: none;
+  }
+  .form-container {
+    overflow-x: hidden;
+  }
+  .fitness-woman {
+    left: 102%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .form-container {
+    padding: 1rem;
+  }
+  .fitness-woman {
+    left: 105%;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 5rem;
+  }
+}

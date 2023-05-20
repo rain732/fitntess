@@ -1,0 +1,19 @@
+.dashbaord{
+    height: 176px;
+    width: 742px;
+    border-radius: 6px;
+}
+
+.dashboardBackground{
+    position: absolute;
+    width: 254px;
+    height: 161px;
+    left: 12px;
+    top: 10px;
+    padding: 2px;
+    border-radius: 0px;
+}
+
+.request-count-text{
+    color: #F0AE2F;
+}
