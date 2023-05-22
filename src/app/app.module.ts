@@ -15,6 +15,9 @@ import { MainScreenComponent } from './pages/main-screen/main-screen.component';
 import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
 import { IconsModule } from './modules/icons/icons.module';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
+import { UserService } from './services/user.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 
@@ -36,9 +39,11 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IconsModule
+    IconsModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

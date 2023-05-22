@@ -16,11 +16,12 @@ export class HttpInterceptorInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
-    const token = localStorage.getItem("token");
+    const email = localStorage.getItem("email");
+    const password = localStorage.getItem("password");
     let headers;
-    if (token) {
+    if (email && password) {
       headers = {
-        Authorization: `Bearer ${token}`
+        Authorization: `Email: ${email} Password: ${password}`
       };
     }
     request = request.clone({
@@ -33,7 +34,7 @@ export class HttpInterceptorInterceptor implements HttpInterceptor {
             return;
           }
           localStorage.clear();
-          this.router.navigateByUrl('/auth');
+          this.router.navigateByUrl('/');
         }
       }));
   }

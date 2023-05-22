@@ -38,12 +38,12 @@ const routes = [
   declarations: [],
   imports: [CommonModule, RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
-  // providers: [
-  //   {
-  //     provide: HTTP_INTERCEPTORS,
-  //     useClass: HttpInterceptorInterceptor,
-  //     multi: true,
-  //   }
-  // ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorInterceptor,
+      multi: true,
+    }
+  ],
 })
 export class AppRoutingModule { }
