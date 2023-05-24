@@ -34,7 +34,7 @@ export class HttpInterceptorInterceptor implements HttpInterceptor {
             return;
           }
           localStorage.clear();
-          this.router.navigateByUrl('/');
+          // this.router.navigateByUrl('/');
         }
       }));
   }

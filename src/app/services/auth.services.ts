@@ -15,14 +15,16 @@ export class AuthServices {
 
   constructor(private http: HttpClient) {}
   
-  login(email: string, password: string): Observable<LoggedUserBrief> {
+  login(email: any, password: string): Observable<LoggedUserBrief> {
     const payload = { email: email, password };
-    return this.http.post<LoggedUserBrief>(environment.apiUrl + '/api/login', payload)
+    return this.http.post<LoggedUserBrief>('http://localhost:5000/login', payload)
       .pipe(
         tap(token => {
-          localStorage.setItem('email', token.email);
-          localStorage.setItem('password', token.password);
-          if(token.is_Admin){
+          console.log(token);
+          localStorage.setItem('email', email);
+          localStorage.setItem('password', password);
+          
+          if(token.user.is_Admin){
             localStorage.setItem('is_Admin', Roles.admin);
           }else{
             localStorage.setItem('is_Admin', Roles.user);

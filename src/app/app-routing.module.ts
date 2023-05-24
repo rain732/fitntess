@@ -12,6 +12,7 @@ import { MainScreenComponent } from './pages/main-screen/main-screen.component';
 import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
 import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 const routes = [
   {
@@ -31,7 +32,10 @@ const routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'not-found', component: NotFoundComponent},
+  {path: 'about-us',component:AboutUsComponent},
   { path: '**', redirectTo: 'not-found'},
+  
+
 ]
 
 @NgModule({
