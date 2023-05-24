@@ -1,1 +1,45 @@
-<p>user-dashboard works!</p>
+<app-navbar></app-navbar>
+<section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1 mt-2">
+          <div class="schedule-table filtering">
+            <table>
+              <thead>
+                <th class="ts-item show">Age</th>
+                <th class="ts-item show">Weight (Kg)</th>
+                <th class="ts-item show">Height (CM)</th>
+                <th class="ts-item show">Gender</th>
+                <th class="ts-item show">BMI</th>
+                <th class="ts-item show">Plan</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of userInfo">
+                  <td class="day-time">{{ item?.age }}</td>
+                  <td class="ts-item show">{{ item?.weight }}</td>
+                  <td class="ts-item show">{{ item?.height }}</td>
+                  <td>{{ item?.gender }}</td>
+                  <td>{{ item?.bmi }}</td>
+                  <td>{{ item?.plan }}</td>
+                </tr>
+              </tbody>
+            </table>
+  
+            <table style="margin-top: 1rem;" >
+              <thead>
+                <th class="ts-item show">Meal</th>
+                <th class="ts-item show">Description</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let dietItem of userInfo[0]?.diet">
+                  <td>{{ dietItem?.meal }}</td>
+                  <td>{{ dietItem?.description }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

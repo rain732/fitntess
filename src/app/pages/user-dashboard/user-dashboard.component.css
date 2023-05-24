@@ -1,0 +1,97 @@
+
+
+.section .filters {
+    margin-bottom: 40px;
+  }
+  
+  .section .filters ul {
+    padding: 0;
+    text-align: center;
+  }
+  
+  .section .filters ul li {
+    list-style: none;
+    display: inline;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .section .filters ul li:after {
+    content: "/";
+    margin-left: 10px;
+    color: #fff;
+  }
+  
+  .section .filters ul li:last-child {
+    margin-right: 0px;
+  }
+  
+  .section .filters ul li:last-child::after {
+    display: none;
+  }
+  
+  .section .filters ul li.active,
+  .section .filters ul li:hover {
+    color: #ed563b;
+  }
+  
+  .section .filters-content {
+    margin-top: 50px;
+  }
+  
+  .section .filters-content .show {
+    opacity: 1;
+    visibility: visible;
+    transition: all 350ms;
+  }
+  
+  .section .filters-content .hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 350ms;
+  }
+  
+  .section {
+    padding: 0px 0px 140px 0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #7a7a7a;
+  }
+  
+  .section table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #fff;
+  }
+  
+  .section table tbody {
+    border-top: 1px solid #fff;
+  }
+  
+  .section table tbody tr {
+    border-bottom: 1px solid #fff;
+  }
+  
+  .section table tbody tr td {
+    border-right: 1px solid #fff;
+    height: 100px;
+  }
+  
+  .section table tr td {
+    color: #fff;
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+  }

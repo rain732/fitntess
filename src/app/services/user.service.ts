@@ -11,10 +11,10 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   createUser(user : any) : Observable<number>{
-    return this.http.post<number>(environment.apiUrl + '', user);
+    return this.http.post<number>('http://localhost:5000/api/users' + '', user);
   }
-  updateUser(user : any) : Observable<number>{
-    return this.http.post<number>(environment.apiUrl + '', user);
+  updateUser(email:string,user : any) : Observable<number>{
+    return this.http.post<number>('http://localhost:5000/api/users/'+email, user);
   }
   getUsers(){
     return this.http.get(environment.apiUrl 

@@ -18,6 +18,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './services/user.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BmiCalComponent } from './pages/bmi-cal/bmi-cal.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 
 
@@ -33,7 +35,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     UserDashboardComponent,
     AdminDashboardComponent,
     MainScreenComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BmiCalComponent,
+    AboutUsComponent
     
   ],
   imports: [
