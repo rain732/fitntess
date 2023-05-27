@@ -20,6 +20,11 @@ import { UserService } from './services/user.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BmiCalComponent } from './pages/bmi-cal/bmi-cal.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { DashboardComponent } from './pages/admin-dashboard/components/dashboard/dashboard.component';
+import { ContactUsComponent } from './pages/admin-dashboard/components/contact-us/contact-us.component';
+import { AdminProfileComponent } from './pages/admin-dashboard/components/admin-profile/admin-profile.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -37,7 +42,11 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     MainScreenComponent,
     NotFoundComponent,
     BmiCalComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    DashboardComponent,
+    ContactUsComponent,
+    AdminProfileComponent,
+    PaginationComponent
     
   ],
   imports: [
@@ -45,7 +54,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     AppRoutingModule,
     IconsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbPaginationModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

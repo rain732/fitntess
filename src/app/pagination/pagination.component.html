@@ -1,0 +1,23 @@
+<div class="d-flex p-1 justify-content-between">
+    <ngb-pagination
+      [collectionSize]="totalPagesNumber"
+      [(page)]="page"
+      [maxSize]="5"
+      [rotate]="true"
+      [ellipses]="true"
+      [boundaryLinks]="true"
+      (pageChange)="handlePageChange($event)"
+    >
+    </ngb-pagination>
+    <span
+      >
+      We Found
+      {{ totalPagesNumber }}
+       Items - Page
+      {{ totalPages ? page : 0 }} 
+      From 
+      {{ totalPages }}
+      </span
+    >
+  </div>
+  

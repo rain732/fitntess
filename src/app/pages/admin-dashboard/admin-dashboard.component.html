@@ -8,41 +8,31 @@
     <nav>
       <a href="#">Xero<span>Source</span></a>
       <ul>
-        <li class="active"><a href="#">Dashboard</a></li>
-        <li><a href="#">Followers</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Social</a></li>
-        <li><a href="#">Contact</a></li>
+        <li 
+        [ngClass]="{'active': isActiveDashBoard==1}"
+        (click)="openSideBarItem(1)"
+        >
+          <a >Dashboard</a></li>
+        <li 
+        [ngClass]="{'active': isActiveDashBoard==2}"
+        (click)="openSideBarItem(2)"
+        >
+          <a >Contacting Messages</a></li>
+        <li 
+        [ngClass]="{'active': isActiveDashBoard==3}"
+        (click)="openSideBarItem(3)"
+        >
+          <a >Edit Profile</a></li>
       </ul>
     </nav>
   </div>
 
   <div class="main-content">
     <h1>Dashboard</h1>
-    <p>Here you can stuff!</p>
-    <div class="panel-wrapper">
-      <div class="panel-head">
-        News
-      </div>
-      <div class="panel-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam fugiat culpa quia possimus molestiae id sapiente ad eveniet, aliquid, eum sint fuga eius, ratione suscipit ut minus voluptates dicta nesciunt.
-      </div>
-    </div>
-    <div class="panel-wrapper">
-      <div class="panel-head">
-        News
-      </div>
-      <div class="panel-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam fugiat culpa quia possimus molestiae id sapiente ad eveniet, aliquid, eum sint fuga eius, ratione suscipit ut minus voluptates dicta nesciunt.
-      </div>
-    </div>
-    <div class="panel-wrapper">
-      <div class="panel-head">
-        News
-      </div>
-      <div class="panel-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam fugiat culpa quia possimus molestiae id sapiente ad eveniet, aliquid, eum sint fuga eius, ratione suscipit ut minus voluptates dicta nesciunt. Totam fugiat culpa quia possimus molestiae id sapiente ad eveniet, aliquid, eum sint fuga eius, ratione suscipit ut minus voluptates dicta nesciunt.
-      </div>
-    </div>
+    <p>Here you can see all your statistical data!</p>
+    <app-dashboard *ngIf="isActiveDashBoard == 1"></app-dashboard>
+    <app-contact-us *ngIf="isActiveDashBoard == 2"></app-contact-us>
+    <app-admin-profile *ngIf="isActiveDashBoard == 3"></app-admin-profile>
   </div>
 </div>
+
