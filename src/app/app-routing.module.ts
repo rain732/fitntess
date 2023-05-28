@@ -19,24 +19,25 @@ const routes = [
   {
     path: '',
     component: AppComponent,
-      children: [
-        { path: '',component: MainLayoutComponent,
-          children: [
-            { path: '',component: MainScreenComponent}
-          ]
-        },
-        { path: 'profile',component: ProfileComponent},
-        { path: 'user-dashboard',component: UserDashboardComponent},
-        { path: 'admin-dashboard',component: AdminDashboardComponent}
+    children: [
+      {
+        path: '', component: MainLayoutComponent,
+        children: [
+          { path: '', component: MainScreenComponent },
+          { path: 'contact-us', component: ContactUsFormComponent },
+        ]
+      },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'user-dashboard', component: UserDashboardComponent },
+      { path: 'admin-dashboard', component: AdminDashboardComponent }
     ],
   },
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'not-found', component: NotFoundComponent},
-  {path: 'about-us',component:AboutUsComponent},
-  {path: 'contact-us',component:ContactUsFormComponent},
-  { path: '**', redirectTo: 'not-found'},
-  
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'not-found', component: NotFoundComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: '**', redirectTo: 'not-found' },
+
 
 ]
 

@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="padding col-lg-10 offset-lg-1 mt-2">
-          <h1 class="pt-5">Welcome (Name)!</h1> <!-- should repalce (Name) with actual Name -->
+          <h1 class="pt-5">Welcome {{ userInfo[0].name }}!</h1> <!-- should repalce (Name) with actual Name -->
           <h3 class="pt-2">Information</h3>
           <div class="schedule-table filtering">
             <table class="shadow-lg p-3 mb-5 bg-white rounded">
@@ -31,7 +31,7 @@
                 </tr>
               </tbody>
             </table>
-            <h3 class="pt-4">Meal Table</h3>
+            <h3 class="pt-4">Diet Plan</h3>
             <table class="shadow-lg p-3 mb-5 bg-white rounded">
               <thead>
                 <th class="ts-item show">Meal</th>

@@ -20,6 +20,7 @@ export class UserDashboardComponent {
   userInfo: any = [
     {
       age: localStorage.getItem("age"),
+      name:localStorage.getItem("name"),
       weight: localStorage.getItem("weight"),
       height: localStorage.getItem("height"),
       gender: localStorage.getItem("gender"),
