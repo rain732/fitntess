@@ -21,11 +21,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BmiCalComponent } from './pages/bmi-cal/bmi-cal.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { DashboardComponent } from './pages/admin-dashboard/components/dashboard/dashboard.component';
-import { ContactUsComponent } from './pages/admin-dashboard/components/contact-us/contact-us.component';
 import { AdminProfileComponent } from './pages/admin-dashboard/components/admin-profile/admin-profile.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { NgxPayPalModule } from 'ngx-paypal';
+import { PaypalComponent } from './pages/paypal/paypal.component';
+import { ContactUsFormComponent } from './pages/contact-us-form/contact-us.component';
+import { ContactUsComponent } from './pages/admin-dashboard/components/contact-us/contact-us.component';
 
 
 @NgModule({
@@ -46,8 +48,10 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
     DashboardComponent,
     ContactUsComponent,
     AdminProfileComponent,
-    PaginationComponent
-    
+    PaginationComponent,
+    PaypalComponent,
+    ContactUsFormComponent
+
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,8 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
     IconsModule,
     FormsModule,
     HttpClientModule,
-    NgbPaginationModule
+    NgbPaginationModule,
+    NgxPayPalModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

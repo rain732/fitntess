@@ -13,6 +13,7 @@ import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.co
 import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ContactUsFormComponent } from './pages/contact-us-form/contact-us.component';
 
 const routes = [
   {
@@ -33,6 +34,7 @@ const routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'not-found', component: NotFoundComponent},
   {path: 'about-us',component:AboutUsComponent},
+  {path: 'contact-us',component:ContactUsFormComponent},
   { path: '**', redirectTo: 'not-found'},
   
 

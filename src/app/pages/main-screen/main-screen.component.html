@@ -24,7 +24,7 @@
             <div class="col-lg-10 offset-lg-1">
                 <div class="cta-content">
                     <h2>Don’t <em>think</em>, begin <em>today</em>!</h2>
-                    
+
                     <div class="main-button scroll-to-section">
                         <a routerLink="/register">Become a member</a>
                     </div>
@@ -43,7 +43,7 @@
                 <div class="section-heading">
                     <h2>Our <em>Classes</em></h2>
                     <img src="assets/images/line-dec.png" alt="">
-                    
+
                 </div>
             </div>
         </div>
@@ -58,7 +58,8 @@
                     </li>
                     <li><a href='#tabs-4'><img src="assets/images/tabs-first-icon.png" alt="">BodyAttack</a>
                     </li>
-                    <div class="main-rounded-button"><a routerLink="">View All Schedules</a></div>
+                    <div class="main-rounded-button" style="cursor: pointer;"><a (click)="scrollToElement()">View All
+                            Schedules</a></div>
                 </ul>
             </div>
             <div class="col-lg-8">
@@ -66,7 +67,8 @@
                     <article id='tabs-1'>
                         <img src="assets/images/bodypump.jpg" alt="First Class">
                         <h4>BodyPump</h4>
-                        <p>BODYPUMP, a total body workout that will burn calories, shape and tone your entire body, increase core strength and improve bone health.</p>
+                        <p>BODYPUMP, a total body workout that will burn calories, shape and tone your entire body,
+                            increase core strength and improve bone health.</p>
                         <div class="main-button">
                             <a href="#">View Schedule</a>
                         </div>
@@ -74,7 +76,9 @@
                     <article id='tabs-2'>
                         <img src="assets/images/bodycombat.jpg" alt="Second Training">
                         <h4>BodyCombat</h4>
-                        <p>Step into a BODYCOMBAT workout and you’ll punch and kick your way to fitness, burning up to 570 calories** along the way. This high-energy martial-arts inspired workout is totally non-contact and there are no complex moves to master.</p>
+                        <p>Step into a BODYCOMBAT workout and you’ll punch and kick your way to fitness, burning up to
+                            570 calories** along the way. This high-energy martial-arts inspired workout is totally
+                            non-contact and there are no complex moves to master.</p>
                         <div class="main-button">
                             <a href="#">View Schedule</a>
                         </div>
@@ -82,8 +86,12 @@
                     <article id='tabs-3'>
                         <img src="assets/images/bodybalance.jpg" alt="Third Class">
                         <h4>BodyBalance</h4>
-                        <p>Ideal for anyone and everyone, BODYBALANCE™ is a new generation yoga class that will improve your mind, your body and your life.
-                            You can expect to bend and stretch through a series of simple yoga moves, elements of Tai Chi and Pilates while an inspiring soundtrack plays in the background. Breathing control is a part of all the exercises, and instructors will always provide options for those just getting started.
+                        <p>Ideal for anyone and everyone, BODYBALANCE™ is a new generation yoga class that will improve
+                            your mind, your body and your life.
+                            You can expect to bend and stretch through a series of simple yoga moves, elements of Tai
+                            Chi and Pilates while an inspiring soundtrack plays in the background. Breathing control is
+                            a part of all the exercises, and instructors will always provide options for those just
+                            getting started.
                         </p>
                         <div class="main-button">
                             <a href="#">View Schedule</a>
@@ -92,7 +100,11 @@
                     <article id='tabs-4'>
                         <img src="assets/images/bodyattack.jpg" alt="Fourth Training">
                         <h4>BodyAttack</h4>
-                        <p>BODYATTACK™ is a high-energy fitness class with moves that cater for total beginners to total addicts. We combine athletic movements like running, lunging and jumping with strength exercises such as push-ups and squats. A LES MILLS™ instructor will pump out energizing tunes and lead you through the workout – challenging your limits in a good way, burning up to 555 calories** and leaving you with a sense of achievement.</p>
+                        <p>BODYATTACK™ is a high-energy fitness class with moves that cater for total beginners to total
+                            addicts. We combine athletic movements like running, lunging and jumping with strength
+                            exercises such as push-ups and squats. A LES MILLS™ instructor will pump out energizing
+                            tunes and lead you through the workout – challenging your limits in a good way, burning up
+                            to 555 calories** and leaving you with a sense of achievement.</p>
                         <div class="main-button">
                             <a href="#">View Schedule</a>
                         </div>
@@ -104,14 +116,14 @@
 </section>
 <!-- ***** Our Classes End ***** -->
 
-<section class="section" id="schedule">
+<section class="section" id="schedule" #schedule>
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading dark-bg">
                     <h2>Classes <em>Schedule</em></h2>
                     <img src="assets/images/line-dec.png" alt="">
-                    
+
                 </div>
             </div>
         </div>
@@ -144,7 +156,7 @@
                 </div>
             </div>
         </div>
-    
+
     </div>
 </section>
 
@@ -156,7 +168,7 @@
                 <div class="section-heading">
                     <h2>Expert <em>Trainers</em></h2>
                     <img src="assets/images/line-dec.png" alt="">
-                    
+
                 </div>
             </div>
         </div>
@@ -196,6 +208,8 @@
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fa fa-behance"></i></a></li>
                         </ul>
+                        <app-paypal [value]="9.99" [currency]="'EUR'"
+                            [itemName]="'Enterprise Subscription'"></app-paypal>
                     </div>
                 </div>
             </div>
@@ -215,6 +229,8 @@
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fa fa-behance"></i></a></li>
                         </ul>
+                        <app-paypal [value]="9.99" [currency]="'EUR'"
+                            [itemName]="'Enterprise Subscription'"></app-paypal>
                     </div>
                 </div>
             </div>

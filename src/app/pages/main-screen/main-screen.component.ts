@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-main-screen',
@@ -6,9 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-screen.component.css']
 })
 export class MainScreenComponent {
+  @ViewChild('schedule', { read: ElementRef }) scheduleSection!: ElementRef;
 
+  ngAfterViewInit() {
+    console.log(this.scheduleSection);
+  }
+
+  scrollToElement() {
+    this.scheduleSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
   activeDay: string = 'monday';
-
+  open: Boolean = false;
+  onSubmit() {
+    this.open = true;
+  }
   times: any =
     {
       monday: [
@@ -136,7 +147,7 @@ export class MainScreenComponent {
 
     };
 
- 
+
 
   onDateChange(day: string) {
     this.activeDay = day;

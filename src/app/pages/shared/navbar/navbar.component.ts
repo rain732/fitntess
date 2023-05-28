@@ -10,23 +10,30 @@ export class NavbarComponent implements OnInit {
   /**
    *
    */
-  isLoggedIn:Boolean = false;
+  isLoggedIn: Boolean = false;
+  name: string = "";
+  isMenuOpen:Boolean = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
   constructor(public router: Router,) {
-    
+
   }
   ngOnInit(): void {
+    this.name = localStorage.getItem("name") || ""
     var email = localStorage.getItem("email");
     console.log(email);
-    
-    if(!NavbarComponent.isNullOrEmpty(email?.toString())){
+
+    if (!NavbarComponent.isNullOrEmpty(email?.toString())) {
       this.isLoggedIn = true;
-    } else{
+    } else {
       this.isLoggedIn = false;
     }
-    if(!this.isLoggedIn){
+    if (!this.isLoggedIn) {
       localStorage.clear();
     }
-    localStorage.setItem("isLoggedIn",this.isLoggedIn+"");
+    localStorage.setItem("isLoggedIn", this.isLoggedIn + "");
   }
   getRoute(str: string) {
     return this.router.url == str;
@@ -34,9 +41,9 @@ export class NavbarComponent implements OnInit {
   static isNullOrEmpty(str?: string) {
     return str === null || str?.toString().match(/^ *$/) !== null;
   }
-  logoutUser(){
+  logoutUser() {
     localStorage.clear();
-    localStorage.setItem("isLoggedIn",false+"")
-    this.isLoggedIn=false
+    localStorage.setItem("isLoggedIn", false + "")
+    this.isLoggedIn = false
   }
 }

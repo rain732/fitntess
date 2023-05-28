@@ -19,10 +19,12 @@
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
     "@ng-bootstrap/ng-bootstrap": "^15.0.0",
+    "@paypal/checkout-server-sdk": "^1.0.3",
     "@popperjs/core": "^2.11.8",
     "angular-feather": "^6.5.0",
     "bootstrap": "^5.2.3",
     "bootstrap5": "^1.1.9",
+    "ngx-paypal": "^11.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
