@@ -983,7 +983,6 @@ th {
   letter-spacing: 0.25px;
   opacity: 1;
   transition: all 0.5s;
-  border-right: 1px solid #fff !important;
   height: 100px;
 }
 
