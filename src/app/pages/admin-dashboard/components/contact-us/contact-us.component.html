@@ -17,19 +17,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let messages of messages?.items">
-          <td>{{ messages.title}}</td>
-          <td>{{ messages.email}}</td>
-          <td>{{ messages.message}}</td>
+        <tr *ngFor="let message of messages">
+          <td>{{ message.fullName}}</td>
+          <td>{{ message.email}}</td>
+          <td>{{ message.message}}</td>
   
         </tr>
-        <tr class="center" *ngIf="messages.totalCount <=0">
+        <tr class="center" *ngIf="messages.length <=0">
           <td colspan="3">No Data</td>
         </tr>
       </tbody>
     </table>
     <hr />
-    <app-pagination [totalPagesNumber]="messages.totalCount" [totalPages]="messages.totalPages" [page]="pageNumber"
+    <!-- <app-pagination [totalPagesNumber]="messages.totalCount" [totalPages]="messages.totalPages" [page]="pageNumber"
       (pageChangeEmitter)="handlePageChange($event)">
-    </app-pagination>
+    </app-pagination> -->
   </div>

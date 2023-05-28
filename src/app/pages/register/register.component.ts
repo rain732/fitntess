@@ -32,7 +32,10 @@ export class RegisterComponent implements OnInit{
   ngOnInit(): void {
     
   }
-
+  validateEmail = (email: string): boolean => {
+    const emailPattern: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
   onSubmit(){
     if(this.first_name == null 
       || this.last_name == null 
@@ -45,7 +48,13 @@ export class RegisterComponent implements OnInit{
         return;
       }
 
+    if(!this.validateEmail(this.email)){
+      alert("Invalid Email");
+      return;
+    }  
+
     if(this.password != this.confirmPassword){
+      alert("Passwords not matching")
       return;
     }
 

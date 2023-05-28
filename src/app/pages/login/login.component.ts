@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
       next: (result) => {
         console.log(result);
         localStorage.setItem("height", result.user.height + "");
+        localStorage.setItem("name", result.user.first_name+" "+result.user.last_name + "");
         localStorage.setItem("weight", result.user.weight + "");
         localStorage.setItem("age", result.user.age + "");
         localStorage.setItem("gender", result.user.gender + "");

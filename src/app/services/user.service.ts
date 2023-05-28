@@ -17,11 +17,11 @@ export class UserService {
     return this.http.post<number>('http://localhost:5000/api/users' + '', user);
   }
   updateUser(email:string,user : any) : Observable<number>{
-    return this.http.post<number>('http://localhost:5000/api/users/'+email, user);
+    return this.http.put<number>('http://localhost:5000/api/users/'+email, user);
   }
   getUsers(){
     return this.http.get(environment.apiUrl 
-      + '');
+      + '/api/users');
   }
 
   getPrograms(){
@@ -40,5 +40,16 @@ export class UserService {
       environment.apiUrl 
       + '/api/users/contactMessagePagination?PageNumber=${pageNumber}');
   }
+
+  createMessage(fullName?:string,email?:string,message?:string) : Observable<number>{
+      let data = {
+        fullName,email,message
+      }
+      return this.http.post<number>(environment.apiUrl+"/api/message",data);
+  }
+  getMessages() : Observable<number>{
+
+    return this.http.get<number>(environment.apiUrl+"/api/messages");
+}
   
 }

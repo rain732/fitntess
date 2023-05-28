@@ -1,25 +1,24 @@
+<div class="card">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList">
+        <td>{{ user.first_name +" " + user.last_name}}</td>
+        <td>{{ user.email}}</td>
 
-  <div class="card">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let user of users?.items">
-          <td>{{ user.first_name + user.last_name}}</td>
-          <td>{{ user.email}}</td>
-  
-        </tr>
-        <tr class="center" *ngIf="users.totalCount <=0">
-          <td colspan="2">No Data</td>
-        </tr>
-      </tbody>
-    </table>
-    <hr />
-    <app-pagination [totalPagesNumber]="users.totalCount" [totalPages]="users.totalPages" [page]="pageNumber"
-      (pageChangeEmitter)="handlePageChange($event)">
-    </app-pagination>
-  </div>
+      </tr>
+      <tr class="center" *ngIf="users.totalCount <=0">
+        <td colspan="2">No Data</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr />
+  <app-pagination [totalPagesNumber]="users.totalCount" [totalPages]="users.totalPages" [page]="pageNumber"
+    (pageChangeEmitter)="handlePageChange($event)">
+  </app-pagination>
+</div>

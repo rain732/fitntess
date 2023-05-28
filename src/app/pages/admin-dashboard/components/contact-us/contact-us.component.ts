@@ -9,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent implements OnInit {
-  messages : PagedList<ContactUsBrief> = new PagedList<ContactUsBrief>;
+  messages : ContactUsBrief[] = [];
   pageNumber: number = 1;
 
   /**
@@ -21,15 +21,14 @@ export class ContactUsComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    this.getAllMessages();
   }
 
-  getContactMessageWithPagination(){
-    this.userServices.getContactMessagePagination(this.pageNumber).subscribe({
-      next: (result) => {
+  getAllMessages(){
+    this.userServices.getMessages().subscribe({
+      next: (result:any) => {
         console.log(result);
-        if(result){
-          this.messages = result;
-        }
+        this.messages = result;
       },
       error: (err) => {
         alert("Error Happend");
@@ -40,10 +39,6 @@ export class ContactUsComponent implements OnInit {
     })
   }
 
-  handlePageChange(pageNumber: number) {
-    this.pageNumber = pageNumber;
-    this.getContactMessageWithPagination();
-  }
 
 
 }

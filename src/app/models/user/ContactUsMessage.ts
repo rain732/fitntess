@@ -1,5 +1,5 @@
 export class ContactUsBrief {
-    title :string = '';
+    fullName :string = '';
     message: string = '';
     email: string = '';
 }
