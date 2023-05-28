@@ -1,5 +1,10 @@
+<app-navbar></app-navbar>
+
+
+
 <div class="container">
-  <div class="d-flex justify-content-center align-items-center vh-100">
+  <h3 style="padding-top: 100px;" class="text-center text-primary">Here you can edit your profile!</h3>
+  <div class="d-flex justify-content-center align-items-center pt-5 ">
     <form (ngSubmit)="onSubmit()" #userForm="ngForm">
       <div class="mb-3">
         <label for="height" class="form-label">Height (cm):</label>
@@ -24,3 +29,4 @@
     </form>
   </div>
 </div>
+<app-footer></app-footer>
