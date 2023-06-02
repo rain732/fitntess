@@ -1,12 +1,12 @@
 <header>
-  <div class="logo">Xero<span>Source</span></div>
+  <div class="logo">Admin<span>Dashboard</span></div>
 </header>
 <div class="nav-btn">Menu</div>
 <div class="container">
   
   <div class="sidebar">
     <nav>
-      <a href="#">Xero<span>Source</span></a>
+      <a routerLink="/admin-dashboard">Admin<span>Dashboard</span></a>
       <ul>
         <li 
         [ngClass]="{'active': isActiveDashBoard==1}"
@@ -18,11 +18,11 @@
         (click)="openSideBarItem(2)"
         >
           <a >Contacting Messages</a></li>
-        <li 
+        <!-- <li 
         [ngClass]="{'active': isActiveDashBoard==3}"
         (click)="openSideBarItem(3)"
         >
-          <a >Edit Profile</a></li>
+          <a >Edit Profile</a></li> -->
       </ul>
     </nav>
   </div>

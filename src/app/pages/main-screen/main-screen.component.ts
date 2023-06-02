@@ -15,11 +15,22 @@ export class MainScreenComponent {
   scrollToElement() {
     this.scheduleSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
-  activeDay: string = 'monday';
-  open: Boolean = false;
-  onSubmit() {
-    this.open = true;
+  constructor(private elementRef: ElementRef) {}
+
+  scrollToBottom(className:string): void {
+    this.paymentOpen = true;
+    this.elementRef.nativeElement.ownerDocument.documentElement.scrollTop = this.elementRef.nativeElement.ownerDocument.documentElement.scrollHeight;
+    this.coachName = className;
   }
+  activeDay: string = 'monday';
+  paymentOpen: Boolean = false;
+  coachName: string = "";
+  onSubmit(coachName:any) {
+    console.log(coachName);
+    this.coachName = coachName;
+    this.paymentOpen = true;
+  }
+
   times: any =
     {
       monday: [

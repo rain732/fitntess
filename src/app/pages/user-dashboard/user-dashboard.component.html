@@ -26,8 +26,8 @@
                   <td>{{ item?.gender }}</td>
                   <td>{{ item?.bmi }}</td>
                   <td>{{ item?.plan }}</td>
-                  <td>motasem</td>
-                  <td>motasem</td>
+                  <td>{{item?.class}}</td>
+                  <td>{{item?.coach}}</td>
                 </tr>
               </tbody>
             </table>
@@ -40,7 +40,18 @@
               <tbody>
                 <tr *ngFor="let dietItem of userInfo[0]?.diet">
                   <td>{{ dietItem?.meal }}</td>
-                  <td>{{ dietItem?.description }}</td>
+                  <td>{{ dietItem?.description }}
+
+                    <img *ngIf="dietItem?.meal == 'Breakfast'" width="75" height="75" src="https://e7.pngegg.com/pngimages/840/327/png-clipart-fried-egg-fried-egg-thumbnail.png" alt="Egg image" >
+                    <img *ngIf="dietItem?.meal == 'Breakfast'" width="75" height="75" src="https://img.freepik.com/premium-photo/red-apples-isolated-white-background-ripe-fresh-apples-clipping-path-apple-with-leaf_299651-595.jpg" alt="Apple image" >
+                    
+                    <img *ngIf="dietItem?.meal == 'Lunch'" width="75" height="75" src="https://img.freepik.com/premium-psd/grilled-chicken-fillet-isolated-plate-with-transparent-background_812337-807.jpg" alt="Lunch image" >
+                    <img *ngIf="dietItem?.meal == 'Lunch'" width="75" height="75" src="https://e7.pngegg.com/pngimages/233/175/png-clipart-broccoli-vegetables-illustration-broccoli-brussels-sprout-capitata-group-vegetable-cauliflower-broccoli-leaf-vegetable-food-thumbnail.png" alt="Brookly image" >
+                    
+                    <img *ngIf="dietItem?.meal == 'Dinner'" width="75" height="75" src="https://www.freepnglogos.com/uploads/corn-png/corn-the-best-mexican-fresh-produce-for-global-exports-5.png" alt="Corn image" >
+                    <img *ngIf="dietItem?.meal == 'Dinner'" width="75" height="75" src="https://w7.pngwing.com/pngs/845/204/png-transparent-raw-meat-thunnus-pizza-food-canned-fish-fish-market-tuna-seafood-beef-recipe.png" alt="Tona image" >
+
+                  </td>
                 </tr>
               </tbody>
             </table>

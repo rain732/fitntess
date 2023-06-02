@@ -16,7 +16,8 @@ export class PaypalComponent implements OnInit {
   @Input()
   currency!: string;
   @Input()
-  itemName!: string;
+  coachName!: string;
+
   @ViewChild(NgxPaypalComponent, { static: false }) paypalComponent?: NgxPaypalComponent;
 
   public payPalConfig?: IPayPalConfig;
@@ -54,6 +55,21 @@ export class PaypalComponent implements OnInit {
           }
         }]
       },
+      onApprove: (data, actions) => {
+        console.log('Payment was successful');
+        if(localStorage.getItem("isLoggedIn") ==  'true'){
+          if(this.coachName.startsWith("Body")){
+            localStorage.setItem("className",this.coachName.toString());
+          }
+          else localStorage.setItem("coachName",this.coachName.toString());
+        }
+        
+        // Perform actions for successful payment (e.g., update database, notify user)
+      },
+      onError: (err) => {
+        console.log('Payment error:', err);
+        // Handle payment error (e.g., display error message to the user)
+      }
       // other configuration here
     };
   }

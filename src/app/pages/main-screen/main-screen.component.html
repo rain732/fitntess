@@ -70,7 +70,7 @@
                         <p>BODYPUMP, a total body workout that will burn calories, shape and tone your entire body,
                             increase core strength and improve bone health.</p>
                         <div class="main-button">
-                            <a href="#">View Schedule</a>
+                            <button (click)="scrollToBottom('BodyPump')" type="button" class="btn btn-danger">Book Class</button>
                         </div>
                     </article>
                     <article id='tabs-2'>
@@ -80,7 +80,7 @@
                             570 calories** along the way. This high-energy martial-arts inspired workout is totally
                             non-contact and there are no complex moves to master.</p>
                         <div class="main-button">
-                            <a href="#">View Schedule</a>
+                            <button (click)="scrollToBottom('BodyCombat')" type="button" class="btn btn-danger">Book Class</button>
                         </div>
                     </article>
                     <article id='tabs-3'>
@@ -94,7 +94,7 @@
                             getting started.
                         </p>
                         <div class="main-button">
-                            <a href="#">View Schedule</a>
+                            <button (click)="scrollToBottom('BodyBalance')" type="button" class="btn btn-danger">Book Class</button>
                         </div>
                     </article>
                     <article id='tabs-4'>
@@ -106,7 +106,7 @@
                             tunes and lead you through the workout – challenging your limits in a good way, burning up
                             to 555 calories** and leaving you with a sense of achievement.</p>
                         <div class="main-button">
-                            <a href="#">View Schedule</a>
+                            <button (click)="scrollToBottom('BodyAttack')" type="button" class="btn btn-danger">Book Class</button>
                         </div>
                     </article>
                 </section>
@@ -183,12 +183,7 @@
                         <h4>Bret D. Bowers</h4>
                         <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan
                             church-key pour-over seitan flannel.</p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
+                        <button (click)="onSubmit('Bret D. Bowers')" type="button" class="btn btn-secondary">Book now</button>
                     </div>
                 </div>
             </div>
@@ -202,14 +197,8 @@
                         <h4>Hector T. Daigl</h4>
                         <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan
                             church-key pour-over seitan flannel.</p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
-                        <app-paypal [value]="9.99" [currency]="'EUR'"
-                            [itemName]="'Enterprise Subscription'"></app-paypal>
+
+                        <button (click)="onSubmit('Hector T. Daigl')" type="button" class="btn btn-secondary">Book now</button>
                     </div>
                 </div>
             </div>
@@ -223,17 +212,19 @@
                         <h4>Paul D. Newman</h4>
                         <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan
                             church-key pour-over seitan flannel.</p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
-                        <app-paypal [value]="9.99" [currency]="'EUR'"
-                            [itemName]="'Enterprise Subscription'"></app-paypal>
+                        <button (click)="onSubmit('Paul D. Newman')" type="button" class="btn btn-secondary">Book now</button>
+
                     </div>
                 </div>
             </div>
         </div>
+        <div *ngIf="paymentOpen" class="col-lg-6 offset-lg-3">
+            <div class="section-heading">
+                <h3>Book {{this.coachName}}</h3>
+                <app-paypal [value]="9.99" [currency]="'EUR'" [coachName]="coachName"></app-paypal>
+
+            </div>
+        </div>
+
     </div>
 </section>

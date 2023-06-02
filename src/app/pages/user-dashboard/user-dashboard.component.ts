@@ -24,6 +24,8 @@ export class UserDashboardComponent {
       weight: localStorage.getItem("weight"),
       height: localStorage.getItem("height"),
       gender: localStorage.getItem("gender"),
+      coach: localStorage.getItem("coachName"),
+      class: localStorage.getItem("className"),
       bmi: this.calculateBMI(parseFloat(localStorage.getItem("weight")?.toString() ?? "0"), parseFloat(localStorage.getItem("height")?.toString() ?? "0")),
       plan: '',
       diet: []
