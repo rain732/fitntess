@@ -17,6 +17,7 @@ interface Diet {
   styleUrls: ['./user-dashboard.component.css']
 })
 export class UserDashboardComponent {
+  imageUrl: string | undefined;
   userInfo: any = [
     {
       age: localStorage.getItem("age"),

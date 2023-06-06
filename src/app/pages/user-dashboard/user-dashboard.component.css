@@ -85,6 +85,7 @@
   .section table tbody tr td {
     border-right: 1px solid black;
     height: 100px;
+    font-size: 1.2rem;
   }
   
   .section table tr td {

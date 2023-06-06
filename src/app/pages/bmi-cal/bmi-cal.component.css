@@ -7,6 +7,10 @@
     max-width: 40rem;
     width: 100%;
   }
+  form.c-bmi {
+    max-width: none;
+    width: 100vw;
+  }
   .c-bmi fieldset {
     border: 0;
     margin: 0;
@@ -14,7 +18,7 @@
   }
   .c-bmi__group-text {
     display: none;
-    font-size: small;
+    font-size: 1.5rem;
     order: 2;
     padding: 1rem 0;
     text-align: left;
@@ -64,16 +68,17 @@
   
   }
   .c-bmi__label output {
-    position: absolute;
+    position: center;
     right: 0;
     top: 0;
+    font-size: 1.5rem;
   }
   .c-bmi__range {
     -webkit-appearance: none;
     appearance: none;
     background-color: transparent;
     outline: none;
-    width: 100%;
+    width: 50cm;
   }
   .c-bmi__range::-webkit-slider-runnable-track {
     background-image: linear-gradient(to bottom, transparent 45%, lightslategray 45%, lightslategray 55%, transparent 55%);
@@ -123,9 +128,10 @@
       transform: translateX(-50%);
       width: 1.5rem;
     }
-    .c-bmi__groups label { flex: 1; }
+    .c-bmi__groups label { flex: 1; font-size: 1.5rem; }
     [for="bmi-g0"] { border-radius: .25rem 0 0 .25rem; }
     [for="bmi-g5"] { border-radius: 0 .25rem .25rem 0; }
+    
   }
   .c-bmi {
     background-color: hsl(211, 20%, 92%);
