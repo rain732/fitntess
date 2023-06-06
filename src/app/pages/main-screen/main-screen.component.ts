@@ -24,13 +24,18 @@ export class MainScreenComponent {
   }
   activeDay: string = 'monday';
   paymentOpen: Boolean = false;
+  showTimes: Boolean = false;
   coachName: string = "";
-  onSubmit(coachName:any) {
-    console.log(coachName);
-    this.coachName = coachName;
+  selectedTime: string = "";
+  onSubmit(selectedTime:any) {
+    console.log(selectedTime);
+    this.selectedTime=selectedTime;
     this.paymentOpen = true;
   }
-
+  showForm(coachName:any){
+    this.coachName = coachName;
+    this.showTimes = !this.showTimes;
+  }
   times: any =
     {
       monday: [

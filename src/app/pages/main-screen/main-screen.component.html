@@ -70,7 +70,8 @@
                         <p>BODYPUMP, a total body workout that will burn calories, shape and tone your entire body,
                             increase core strength and improve bone health.</p>
                         <div class="main-button">
-                            <button (click)="scrollToBottom('BodyPump')" type="button" class="btn btn-danger">Book Class</button>
+                            <button (click)="scrollToBottom('BodyPump')" type="button" class="btn btn-danger">Book
+                                Class</button>
                         </div>
                     </article>
                     <article id='tabs-2'>
@@ -80,7 +81,8 @@
                             570 calories** along the way. This high-energy martial-arts inspired workout is totally
                             non-contact and there are no complex moves to master.</p>
                         <div class="main-button">
-                            <button (click)="scrollToBottom('BodyCombat')" type="button" class="btn btn-danger">Book Class</button>
+                            <button (click)="scrollToBottom('BodyCombat')" type="button" class="btn btn-danger">Book
+                                Class</button>
                         </div>
                     </article>
                     <article id='tabs-3'>
@@ -94,7 +96,8 @@
                             getting started.
                         </p>
                         <div class="main-button">
-                            <button (click)="scrollToBottom('BodyBalance')" type="button" class="btn btn-danger">Book Class</button>
+                            <button (click)="scrollToBottom('BodyBalance')" type="button" class="btn btn-danger">Book
+                                Class</button>
                         </div>
                     </article>
                     <article id='tabs-4'>
@@ -106,7 +109,8 @@
                             tunes and lead you through the workout – challenging your limits in a good way, burning up
                             to 555 calories** and leaving you with a sense of achievement.</p>
                         <div class="main-button">
-                            <button (click)="scrollToBottom('BodyAttack')" type="button" class="btn btn-danger">Book Class</button>
+                            <button (click)="scrollToBottom('BodyAttack')" type="button" class="btn btn-danger">Book
+                                Class</button>
                         </div>
                     </article>
                 </section>
@@ -183,7 +187,28 @@
                         <h4>Bret D. Bowers</h4>
                         <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan
                             church-key pour-over seitan flannel.</p>
-                        <button (click)="onSubmit('Bret D. Bowers')" type="button" class="btn btn-secondary">Book now</button>
+                        <button *ngIf="!showTimes || coachName != 'Bret D. Bowers'" (click)="showForm('Bret D. Bowers')"
+                            type="button" class="btn btn-secondary"> Show Details</button>
+                        <button *ngIf="showTimes && coachName == 'Bret D. Bowers'" (click)="showForm('Bret D. Bowers')"
+                            type="button" class="btn btn-secondary"> Hide Details</button>
+                        <div style="padding-block: 16px;" *ngIf="showTimes && coachName == 'Bret D. Bowers'">
+                            <label for="bookingTime">Select a time:</label>
+                            <div class="radio-group" style="padding-block: 16px;">
+                                <label style="margin-right: 12px;">
+                                    <input type="radio" name="bookingTime" value="7AM - 10AM" [(ngModel)]="selectedTime">
+                                    7AM - 10AM
+                                </label>
+                                <label style="margin-right: 12px;">
+                                    <input type="radio" name="bookingTime" value="12PM - 3PM" [(ngModel)]="selectedTime">
+                                    12PM - 3PM
+                                </label>
+                                <label style="margin-right: 12px;">
+                                    <input type="radio" name="bookingTime" value="5PM - 10PM" [(ngModel)]="selectedTime">
+                                    5PM - 10PM
+                                </label>
+                            </div>
+                            <button (click)="onSubmit(selectedTime)" class="btn btn-danger">Book now</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -198,7 +223,30 @@
                         <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan
                             church-key pour-over seitan flannel.</p>
 
-                        <button (click)="onSubmit('Hector T. Daigl')" type="button" class="btn btn-secondary">Book now</button>
+                        <button *ngIf="!showTimes || coachName != 'Hector T. Daigl'"
+                            (click)="showForm('Hector T. Daigl')" type="button" class="btn btn-secondary"> Show
+                            Details</button>
+                        <button *ngIf="showTimes && coachName == 'Hector T. Daigl'"
+                            (click)="showForm('Hector T. Daigl')" type="button" class="btn btn-secondary"> Hide
+                            Details</button>
+                    </div>
+                    <div style="padding-block: 16px;" *ngIf="showTimes && coachName == 'Hector T. Daigl'">
+                        <label for="bookingTime">Select a time:</label>
+                        <div class="radio-group" style="padding-block: 16px;">
+                            <label style="margin-right: 12px;">
+                                <input type="radio" name="bookingTime" value="7AM - 10AM" [(ngModel)]="selectedTime">
+                                7AM - 10AM
+                            </label>
+                            <label style="margin-right: 12px;">
+                                <input type="radio" name="bookingTime" value="12PM - 3PM" [(ngModel)]="selectedTime">
+                                12PM - 3PM
+                            </label>
+                            <label style="margin-right: 12px;">
+                                <input type="radio" name="bookingTime" value="5PM - 10PM" [(ngModel)]="selectedTime">
+                                5PM - 10PM
+                            </label>
+                        </div>
+                        <button (click)="onSubmit(selectedTime)" class="btn btn-danger">Book now</button>
                     </div>
                 </div>
             </div>
@@ -212,7 +260,28 @@
                         <h4>Paul D. Newman</h4>
                         <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan
                             church-key pour-over seitan flannel.</p>
-                        <button (click)="onSubmit('Paul D. Newman')" type="button" class="btn btn-secondary">Book now</button>
+                        <button *ngIf="!showTimes || coachName != 'Paul D. Newman'" (click)="showForm('Paul D. Newman')"
+                            type="button" class="btn btn-secondary"> Show Details</button>
+                        <button *ngIf="showTimes && coachName == 'Paul D. Newman'" (click)="showForm('Paul D. Newman')"
+                            type="button" class="btn btn-secondary"> Hide Details</button>
+                        <div style="padding-block: 16px;" *ngIf="showTimes && coachName == 'Paul D. Newman'">
+                            <label for="bookingTime">Select a time:</label>
+                            <div class="radio-group" style="padding-block: 16px;">
+                                <label style="margin-right: 12px;">
+                                    <input type="radio" name="bookingTime" value="7AM - 10AM" [(ngModel)]="selectedTime">
+                                    7AM - 10AM
+                                </label>
+                                <label style="margin-right: 12px;">
+                                    <input type="radio" name="bookingTime" value="12PM - 3PM" [(ngModel)]="selectedTime">
+                                    12PM - 3PM
+                                </label>
+                                <label style="margin-right: 12px;">
+                                    <input type="radio" name="bookingTime" value="5PM - 10PM" [(ngModel)]="selectedTime">
+                                    5PM - 10PM
+                                </label>
+                            </div>
+                            <button (click)="onSubmit(selectedTime)" class="btn btn-danger">Book now</button>
+                        </div>
 
                     </div>
                 </div>
@@ -221,7 +290,7 @@
         <div *ngIf="paymentOpen" class="col-lg-6 offset-lg-3">
             <div class="section-heading">
                 <h3>Book {{this.coachName}}</h3>
-                <app-paypal [value]="9.99" [currency]="'EUR'" [coachName]="coachName"></app-paypal>
+                <app-paypal [value]="9.99" [currency]="'EUR'" [coachName]="coachName + ' ' + selectedTime"></app-paypal>
 
             </div>
         </div>

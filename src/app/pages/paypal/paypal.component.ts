@@ -61,7 +61,9 @@ export class PaypalComponent implements OnInit {
           if(this.coachName.startsWith("Body")){
             localStorage.setItem("className",this.coachName.toString());
           }
+          
           else localStorage.setItem("coachName",this.coachName.toString());
+          console.log(this.coachName);
         }
         
         // Perform actions for successful payment (e.g., update database, notify user)
