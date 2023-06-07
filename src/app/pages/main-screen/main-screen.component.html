@@ -67,6 +67,7 @@
                     <article id='tabs-1'>
                         <img src="assets/images/bodypump.jpg" alt="First Class">
                         <h4>BodyPump</h4>
+                        <h5>Time : Sunday, Monday | 8:00 - 10:00 AM</h5>
                         <p>BODYPUMP, a total body workout that will burn calories, shape and tone your entire body,
                             increase core strength and improve bone health.</p>
                         <div class="main-button">
@@ -77,6 +78,7 @@
                     <article id='tabs-2'>
                         <img src="assets/images/bodycombat.jpg" alt="Second Training">
                         <h4>BodyCombat</h4>
+                        <h5>Time : Tuseday, Wednesday | 9:00 - 11:00 AM</h5>
                         <p>Step into a BODYCOMBAT workout and you’ll punch and kick your way to fitness, burning up to
                             570 calories** along the way. This high-energy martial-arts inspired workout is totally
                             non-contact and there are no complex moves to master.</p>
@@ -88,6 +90,7 @@
                     <article id='tabs-3'>
                         <img src="assets/images/bodybalance.jpg" alt="Third Class">
                         <h4>BodyBalance</h4>
+                        <h5>Time : Saturday, Thursday | 10:00 - 12:00 AM</h5>
                         <p>Ideal for anyone and everyone, BODYBALANCE™ is a new generation yoga class that will improve
                             your mind, your body and your life.
                             You can expect to bend and stretch through a series of simple yoga moves, elements of Tai
@@ -103,14 +106,15 @@
                     <article id='tabs-4'>
                         <img src="assets/images/bodyattack.jpg" alt="Fourth Training">
                         <h4>BodyAttack</h4>
+                        <h5>Time : Firday | 12:00 - 2:00 PM</h5>
                         <p>BODYATTACK™ is a high-energy fitness class with moves that cater for total beginners to total
                             addicts. We combine athletic movements like running, lunging and jumping with strength
                             exercises such as push-ups and squats. A LES MILLS™ instructor will pump out energizing
                             tunes and lead you through the workout – challenging your limits in a good way, burning up
                             to 555 calories** and leaving you with a sense of achievement.</p>
                         <div class="main-button">
-                            <button (click)="scrollToBottom('BodyAttack')" type="button" class="btn btn-danger">Book
-                                Class</button>
+                            <button (click)="scrollToBottom('Book Class')" type="button" class="btn btn-danger"
+                            >Book Class</button>
                         </div>
                     </article>
                 </section>
@@ -194,17 +198,14 @@
                             <label for="bookingTime">Select a time:</label>
                             <div class="radio-group" style="padding-block: 16px;">
                                 <label style="margin-right: 12px;">
-                                    <input type="radio" name="bookingTime" value="7AM - 10AM" [(ngModel)]="selectedTime">
-                                    7AM - 10AM
+                                    <input type="radio" name="bookingTime" value="1PM - 3PM" [(ngModel)]="selectedTime">
+                                    1PM - 3PM
                                 </label>
                                 <label style="margin-right: 12px;">
-                                    <input type="radio" name="bookingTime" value="12PM - 3PM" [(ngModel)]="selectedTime">
-                                    12PM - 3PM
+                                    <input type="radio" name="bookingTime" value="3PM - 6PM" [(ngModel)]="selectedTime">
+                                    3PM - 6PM
                                 </label>
-                                <label style="margin-right: 12px;">
-                                    <input type="radio" name="bookingTime" value="5PM - 10PM" [(ngModel)]="selectedTime">
-                                    5PM - 10PM
-                                </label>
+                                
                             </div>
                             <button (click)="onSubmit(selectedTime)" class="btn btn-danger">Book now</button>
                         </div>
@@ -231,17 +232,13 @@
                     <div style="padding-block: 16px;" *ngIf="showTimes && coachName == 'Hector T. Daigl'">
                         <label for="bookingTime">Select a time:</label>
                         <div class="radio-group" style="padding-block: 16px;">
-                            <label style="margin-right: 12px;">
+                            <label style="margin-right: 12px;" >
                                 <input type="radio" name="bookingTime" value="7AM - 10AM" [(ngModel)]="selectedTime">
                                 7AM - 10AM
                             </label>
                             <label style="margin-right: 12px;">
-                                <input type="radio" name="bookingTime" value="12PM - 3PM" [(ngModel)]="selectedTime">
-                                12PM - 3PM
-                            </label>
-                            <label style="margin-right: 12px;">
-                                <input type="radio" name="bookingTime" value="5PM - 10PM" [(ngModel)]="selectedTime">
-                                5PM - 10PM
+                                <input type="radio" name="bookingTime" value="10AM - 1PM" [(ngModel)]="selectedTime">
+                                10AM - 1PM
                             </label>
                         </div>
                         <button (click)="onSubmit(selectedTime)" class="btn btn-danger">Book now</button>
@@ -265,16 +262,12 @@
                             <label for="bookingTime">Select a time:</label>
                             <div class="radio-group" style="padding-block: 16px;">
                                 <label style="margin-right: 12px;">
-                                    <input type="radio" name="bookingTime" value="7AM - 10AM" [(ngModel)]="selectedTime">
-                                    7AM - 10AM
+                                    <input type="radio" name="bookingTime" value="6PM - 9PM" [(ngModel)]="selectedTime">
+                                    6PM - 9PM
                                 </label>
                                 <label style="margin-right: 12px;">
-                                    <input type="radio" name="bookingTime" value="12PM - 3PM" [(ngModel)]="selectedTime">
-                                    12PM - 3PM
-                                </label>
-                                <label style="margin-right: 12px;">
-                                    <input type="radio" name="bookingTime" value="5PM - 10PM" [(ngModel)]="selectedTime">
-                                    5PM - 10PM
+                                    <input type="radio" name="bookingTime" value="9PM - 12AM" [(ngModel)]="selectedTime">
+                                    9PM - 12AM
                                 </label>
                             </div>
                             <button (click)="onSubmit(selectedTime)" class="btn btn-danger">Book now</button>

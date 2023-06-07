@@ -9,7 +9,7 @@ export class MainScreenComponent {
   @ViewChild('schedule', { read: ElementRef }) scheduleSection!: ElementRef;
 
   ngAfterViewInit() {
-    console.log(this.scheduleSection);
+    // console.log(this.scheduleSection);
   }
 
   scrollToElement() {
@@ -19,7 +19,8 @@ export class MainScreenComponent {
 
   scrollToBottom(className:string): void {
     this.paymentOpen = true;
-    this.elementRef.nativeElement.ownerDocument.documentElement.scrollTop = this.elementRef.nativeElement.ownerDocument.documentElement.scrollHeight;
+    this.elementRef.nativeElement.ownerDocument.documentElement.scrollTop = 
+      this.elementRef.nativeElement.ownerDocument.documentElement.scrollHeight;
     this.coachName = className;
   }
   activeDay: string = 'monday';
@@ -28,14 +29,28 @@ export class MainScreenComponent {
   coachName: string = "";
   selectedTime: string = "";
   onSubmit(selectedTime:any) {
+    this.paymentOpen = false;
     console.log(selectedTime);
+    if(selectedTime == "9PM - 12AM"){
+      alert("please choose another time (9PM - 12AM)! this time is all booked.")
+      return;
+    }
+    if(selectedTime == "7AM - 10AM"){
+      alert("please choose another time (7AM - 10AM)! this time is all booked.")
+      return;
+    }
+    console.log("not done")
     this.selectedTime=selectedTime;
-    this.paymentOpen = true;
+    setTimeout(() => {
+      this.paymentOpen = true;
+    }, 1300);
   }
   showForm(coachName:any){
+    this.paymentOpen = false;
     this.coachName = coachName;
     this.showTimes = !this.showTimes;
   }
+  
   times: any =
     {
       monday: [
