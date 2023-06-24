@@ -68,7 +68,6 @@ export class RegisterComponent implements OnInit{
 
     this.userService.createUser(this.user).subscribe( {
       next: (result) => {
-        console.log("success");
         localStorage.setItem("email",this.user.email);
         localStorage.setItem("name",this.user.first_name +" "+this.user.last_name);
         localStorage.setItem("password",this.user.password);
@@ -76,10 +75,9 @@ export class RegisterComponent implements OnInit{
       },
       error: (err) => {
         alert("Email already used")
-        console.log("error");
       },
       complete: () =>{
-        console.log("completed");
+
       }
     })
     

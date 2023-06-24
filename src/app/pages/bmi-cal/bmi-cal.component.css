@@ -8,7 +8,7 @@
     width: 100%;
   }
   form.c-bmi {
-    max-width: none;
+    max-width: 100%;
     width: 100vw;
   }
   .c-bmi fieldset {
@@ -78,7 +78,7 @@
     appearance: none;
     background-color: transparent;
     outline: none;
-    width: 50cm;
+    width: 100%;
   }
   .c-bmi__range::-webkit-slider-runnable-track {
     background-image: linear-gradient(to bottom, transparent 45%, lightslategray 45%, lightslategray 55%, transparent 55%);
